@@ -1,0 +1,29 @@
+# Avoid accidental upload of the Sketch and Figma design files
+#####################################################
+## Please do not remove lines 5 and 6 - thanks! 🙂 ##
+#####################################################
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert the design file
+###############################################
+## Please do not remove line 12 - thanks! 🙂 ##
+###############################################
+*.xd
+
+# Avoid your project being littered with annoying .DS_Store files!
+.DS_Store
+.prettierignore
+
+# Ignore all 'design' folders across subprojects
+**/design/
+
+# Ignore all 'style-guide.md' files across subprojects
+**/style-guide.md
+
+# Ignore all 'README-template.md' or 'README-guide.md' files
+**/README-template.md
+**/README-guide.md
+
+# Ignore preview images that are not part of your final README
+**/preview.jpg
