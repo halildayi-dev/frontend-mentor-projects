@@ -32,7 +32,10 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - Semantic HTML5 markup  
 - CSS custom properties  
 - Flexbox  
-- Desktop-first workflow
+- Desktop-first workflow  
+- Responsive design with media queries  
+- CSS transitions and hover effects for interactivity  
+- Google Fonts for custom typography
 
 
 ### What I learned
@@ -66,6 +69,40 @@ This simple step made the page look much more professional and modern.
 
 Even though these details seem small, they helped me understand the logic behind CSS styling better and will make my future projects easier to style.
 
+#### 3. Hover effects and transitions
+
+In this project, I learned how to add smooth hover effects and transitions for interactive design:
+
+```
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+```
+
+This creates subtle animations that improve user experience and make the component more dynamic.
+
+
+#### 4. Responsive design
+
+I improved the component for different screen sizes (PC, tablet, and mobile) using media queries:
+```
+/* For small screens */
+@media (max-width: 480px) {...}
+
+/* For medium screens */
+@media (min-width: 481px) and (max-width: 768px) {...}
+
+/* For large screen: PC (min-width: 769px) */
+@media (min-width: 769px) {...}
+
+```
+
+Even if the screenshots don’t show these changes, the component is now fully responsive, adapting to various devices.
 
 ### Useful resources
 
