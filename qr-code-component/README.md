@@ -29,12 +29,13 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Built with
 
-- Semantic HTML5 markup  
-- CSS custom properties  
-- Flexbox  
-- Desktop-first workflow  
-- Responsive design with media queries  
-- CSS transitions and hover effects for interactivity  
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- Responsive design without media queries (natural scaling)
+- Accessibility improvements using focus styles
+- CSS transitions and hover effects for interactivity
 - Google Fonts for custom typography
 
 
@@ -66,13 +67,22 @@ I added the following line to the ```<head>``` tag and used the font in my CSS:
 ```font-family: 'Outfit', sans-serif;```
 
 This simple step made the page look much more professional and modern.
-
 Even though these details seem small, they helped me understand the logic behind CSS styling better and will make my future projects easier to style.
 
-#### 3. Hover effects and transitions
+#### 3. Mobile-first workflow
+
+Previously, I used to start with desktop layouts and then adjust them for smaller screens.
+Now, I understand that designing mobile-first helps create a layout that naturally scales up, sometimes even eliminating the need for extra media queries.
+This makes the design simpler and more efficient.
+
+#### 4. Simplifying responsiveness
+
+Instead of overusing ```@media``` queries, I learned to rely more on flexible widths and relative units like ```%``` and ```rem```.
+This approach keeps the layout adaptable across screen sizes with minimal code.
+
+#### 5. Hover effects and transitions
 
 In this project, I learned how to add smooth hover effects and transitions for interactive design:
-
 ```
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -83,26 +93,29 @@ In this project, I learned how to add smooth hover effects and transitions for i
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 ```
-
 This creates subtle animations that improve user experience and make the component more dynamic.
 
+#### 6. Accessibility with focus styles
 
-#### 4. Responsive design
-
-I improved the component for different screen sizes (PC, tablet, and mobile) using media queries:
-```
-/* For small screens */
-@media (max-width: 480px) {...}
-
-/* For medium screens */
-@media (min-width: 481px) and (max-width: 768px) {...}
-
-/* For large screen: PC (min-width: 769px) */
-@media (min-width: 769px) {...}
+I added a small but important accessibility enhancement:
 
 ```
+.card:focus-within {
+  outline: 2px solid hsl(218, 44%, 22%);
+  outline-offset: 2px;
+}
+```
+This ensures users navigating with a keyboard can visually track which element is active — improving usability.
 
-Even if the screenshots don’t show these changes, the component is now fully responsive, adapting to various devices.
+#### 7. Clean CSS structure
+I reorganized my CSS following this pattern:
+```
+/* 1. Reset & Variables */
+/* 2. Base Styles */
+/* 3. Component Styles */
+/* 4. Utilities */
+```
+This makes my stylesheets easier to maintain and understand for future projects.
 
 ### Useful resources
 
