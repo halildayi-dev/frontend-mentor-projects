@@ -124,5 +124,6 @@ This makes my stylesheets easier to maintain and understand for future projects.
 
 ## Author
 
-- Frontend Mentor - [@halildayi-dev](https://www.frontendmentor.io/profile/yourusername)
-
+- Frontend Mentor - [@halildayi-dev](https://www.frontendmentor.io/profile/halildayi-dev)
+- X (Twitter) - [@halildayi_dev](https://x.com/halildayi_dev)
+- GitHub - [halildayi-dev](https://github.com/halildayi-dev/frontend-mentor-projects)

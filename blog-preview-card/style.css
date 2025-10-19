@@ -1,0 +1,172 @@
+/* =========================================================
+FONT IMPORTS
+========================================================= */
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 500 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 500 800;
+  font-style: italic;
+}
+
+/* =========================================================
+RESET & BASE STYLES
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+ROOT VARIABLES
+========================================================= */
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 42%);
+  --header-color: hsl(0, 0%, 7%);
+}
+
+/* =========================================================
+HTML & BODY STYLES
+========================================================= */
+
+body {
+  min-height: 100vh;
+  font-family: "Figtree", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+  padding: 1rem;
+}
+
+/* =========================================================
+CARD COMPONENT
+========================================================= */
+
+.card {
+  width: 100%;
+  max-width: 23.75rem; /* 380px */
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  border: 1px solid var(--header-color);
+  box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 1);
+}
+
+/* =========================================================
+CARD IMAGE
+========================================================= */
+
+.card__image {
+  width: 90%;
+  height: 12.5rem; /* 200px */
+  overflow: hidden;
+  align-self: center;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================================
+CARD CONTENT
+========================================================= */
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+/* Tag */
+.card__tag {
+  align-self: flex-start;
+  display: inline-flex;
+  background-color: var(--yellow);
+  color: var(--header-color);
+  font-weight: 800;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Date */
+.card__date {
+  color: var(--header-color);
+  font-size: 0.9rem;
+}
+
+/* Title */
+.card__title {
+  color: var(--header-color);
+  font-weight: 800;
+  font-size: 1.4rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.card__title:hover {
+  color: var(--yellow);
+}
+
+/* Description */
+.card__description {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+CARD AUTHOR
+========================================================= */
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem; /* 10px */
+  margin-top: 1rem;
+}
+
+.card__author-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card__author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__author-name {
+  color: var(--header-color);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
