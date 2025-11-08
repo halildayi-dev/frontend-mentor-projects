@@ -1,0 +1,125 @@
+/* =========================================================
+RESET & BASE STYLES
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+ROOT VARIABLES
+========================================================= */
+:root {
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+  --font-main: 'Inter', sans-serif;
+}
+
+/* =========================================================
+HTML & BODY STYLES
+========================================================= */
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-grey-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  color: var(--color-white);
+}
+
+/* =========================================================
+CARD COMPONENT
+========================================================= */
+.profile-card {
+  background-color: var(--color-grey-800);
+  width: 100%;
+  max-width: 22rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================================
+CARD AVATAR
+========================================================= */
+.profile-card__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid var(--color-green);
+}
+
+/* =========================================================
+CARD INFO
+========================================================= */
+.profile-card__name {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.profile-card__location {
+  color: var(--color-green);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.profile-card__role {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+/* =========================================================
+CARD LINKS
+========================================================= */
+.profile-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.profile-card__link {
+  display: block;
+  background-color: var(--color-grey-700);
+  color: var(--color-white);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card__link:hover {
+  background-color: var(--color-green);
+  color: var(--color-grey-900);
+  box-shadow: 0 0 10px var(--color-green);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+@media (min-width: 768px) {
+  .profile-card {
+    padding: 2.5rem;
+    max-width: 25rem;
+  }
+}
